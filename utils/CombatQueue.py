@@ -3,11 +3,9 @@ class CombatQueue:
         self.q = qObj_list
         self.sortQueue()
 
-    def getQueue(self):
-        self.sortQueue()
-        # for i in self.q:
-        #     print(i.name, i.time)
-        # print("\n\n\n")
+    def getQueue(self, noSort=False):
+        if not noSort:
+            self.sortQueue()
         return self.q
 
     def sortQueue(self):

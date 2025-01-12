@@ -3,9 +3,7 @@ from .BaseQObject import BaseQObject
 
 class PlayerQObject(BaseQObject):
     def __init__(self, name, speed, e=None, q=None):
-        self.name = name
-        self.speed = speed
-        self.time = 10000 / speed
+        super().__init__(name, speed)
         self.e = e
         self.q = q
 
