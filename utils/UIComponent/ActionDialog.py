@@ -21,7 +21,7 @@ class ActionDialog(QDialog):
 
         self.type_input.addItem("")
         for qObjAction in QObjActionTemplates:
-            self.type_input.addItem(qObjAction["name"])
+            self.type_input.addItem(qObjAction["type"])
 
         # Populate the target dropdown
         if targets:

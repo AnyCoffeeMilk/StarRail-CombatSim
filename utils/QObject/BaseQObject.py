@@ -13,5 +13,5 @@ class BaseQObject:
     def resetTime(self):
         self.updateTime()
 
-    def turnAction(self, action):
+    def turnAction(self):
         self.updateTime()

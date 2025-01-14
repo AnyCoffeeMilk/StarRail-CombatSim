@@ -19,27 +19,27 @@ class PlayerQObject(BaseQObject):
 
     def enterAction(self):
         for qObjAction in self.enter:
-            qObjAction['func']()
+            qObjAction['func'](qObjAction['target'], qObjAction['rate'])
 
     def turnAction(self, action):
         super().turnAction()
         if action == "E" and self.e != []:
             for qObjAction in self.e:
-                qObjAction['func']()
+                qObjAction['func'](qObjAction['target'], qObjAction['rate'])
         if "A" in action and self.q != []:
             for qObjAction in self.a:
-                qObjAction['func']()
+                qObjAction['func'](qObjAction['target'], qObjAction['rate'])
     
     def QAction(self):
         for qObjAction in self.q:
             qObjAction['func'](qObjAction['target'], qObjAction['rate'])
 
     def addAction(self, action_type, qObjAction):
-        if action_type == 'Enter':
+        if action_type == 'enter_action':
             self.enter.append(qObjAction)
-        elif action_type == 'E':
+        elif action_type == 'e_action':
             self.e.append(qObjAction)
-        elif action_type == 'Q':
+        elif action_type == 'q_action':
             self.q.append(qObjAction)
-        elif action_type == 'A':
+        elif action_type == 'a_action':
             self.a.append(qObjAction)

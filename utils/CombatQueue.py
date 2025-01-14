@@ -1,6 +1,8 @@
 class CombatQueue:
     def __init__(self, qObj_list):
         self.q = qObj_list
+        self.cur_step = -1
+        self.steps = []
         self.sortQueue()
 
     def getQueue(self, noSort=False):
@@ -25,3 +27,7 @@ class CombatQueue:
         head_t = self.getHead().time
         for i in self.q:
             i.time -= head_t
+    
+    def addStep(self, name, action):
+        self.steps.append(f"{name} {action}")
+        self.cur_step += 1

@@ -3,13 +3,13 @@ def forwardAction(tgt_qObj, rate):
 
 QObjActionTemplates = [
     {
-        "name": "拉條",
+        "type": "拉條",
         "func": forwardAction,
         "target": None,
         "rate": None,
     },
     {
-        "name": "加速",
+        "type": "加速",
         "func": forwardAction,
         "target": None,
         "rate": None,
