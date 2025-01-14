@@ -6,6 +6,9 @@ class TurnQObject(BaseQObject):
         self.t = 0
         name = "Turn {}".format(self.t)
         super().__init__(name, 10000 / 150)
+    
+    def resetTime(self):
+        self.time = 150
 
     def turnAction(self):
         self.time = 100
