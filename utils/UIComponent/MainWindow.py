@@ -335,6 +335,7 @@ class MainWindow(QMainWindow):
                 qObj.name = self.edit_boxes[qObj]["name"].text()
                 qObj.speed = float(self.edit_boxes[qObj]["speed"].text())
             qObj.resetTime()
+        self.q.forward()
         self.update_queue_display()
 
     def add_action(self, QObj, action_type):
